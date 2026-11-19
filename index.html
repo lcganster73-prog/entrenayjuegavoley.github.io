@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voleibol Educativo — Unidad Educativa Antofagasta</title>
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Iconos de FontAwesome para redes sociales y decoraciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+   <!-- MENÚ LATERAL IZQUIERDO OCULTO / RETRÁCTIL -->
+<header class="header-sidebar" id="sidebar">
+    <div class="sidebar-container">
+        <!-- Botón para cerrar el menú dentro del sidebar -->
+        <button class="close-sidebar-btn" id="close-sidebar" aria-label="Cerrar menú">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <a href="#hero" class="logo">
+            <i class="fa-solid fa-volleyball logo-icon"></i> U.E. Antofagasta
+        </a>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#hero" class="nav-link active">Inicio</a></li>
+                <li><a href="#videos" class="nav-link">Técnicas</a></li>
+                <li><a href="#teoria" class="nav-link">Reglas</a></li>
+                <li><a href="#sistemas" class="nav-link">Sistemas</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="#extras" class="nav-link">Extras</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Botón flotante para abrir el menú lateral cuando esté oculto -->
+<button class="open-sidebar-btn" id="open-sidebar" aria-label="Abrir menú">
+    <i class="fa-solid fa-bars"></i>
+</button>
+    <!-- 2. PORTADA (HERO) -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in">
+            <h1>Aprende Voleibol</h1>
+            <p>Plataforma educativa para los estudiantes de la Unidad Educativa Antofagasta. Domina las técnicas, tácticas y fundamentos de esta pasión.</p>
+            <a href="#videos" class="btn-cta">Comienza a aprender <i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- 3. SECCIÓN DE VIDEOS -->
+    <section id="videos" class="section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2> Videos Tutoriales de Técnicas</h2>
+                <p>Explora las ejecuciones biomecánicas básicas del voleibol con nuestros recursos en video.</p>
+            </div>
+
+            <div class="video-grid">
+                <!-- Tarjeta 1 -->
+                <div class="video-card fade-in">
+                    <video controls width="100%">
+    <source src="videos/saque.mp4.mp4" type="video/mp4">
+</video>
+                    <div class="video-info">
+                        <h3>El Saque (Servicio)</h3>
+                        <p>Aprende el saque por abajo y la técnica del saque flotante o en suspensión.</p>
+                    
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="video-card fade-in">
+                    <video controls width="100%">
+    <source src="videos/antebrazo.mp4.mp4" type="video/mp4">
+</video>
+                    <div class="video-info">
+                        <h3>Recepción y Antebrazo</h3>
+                        <p>La base de la defensa: colocación correcta de brazos, hombros y tronco.</p>
+                
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="video-card fade-in">
+                    <video controls width="100%">
+    <source src="videos/colocacion.mp4.mp4" type="video/mp4">
+</video>
+                    <div class="video-info">
+                        <h3>Colocación (Voleo Alto)</h3>
+                        <p>Precisión de dedos para armar la jugada ofensiva con el armador o colocador.</p>
+            
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="video-card fade-in">
+                    <video controls width="100%">
+    <source src="videos/remate.mp4.mp4" type="video/mp4">
+</video>
+                    <div class="video-info">
+                        <h3>Remate y Bloqueo</h3>
+                        <p>Ataque contundente en la red y la primera línea defensiva sobre la malla.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para ver videos YouTube -->
+    <div class="modal" id="video-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <div class="iframe-container">
+                <iframe id="youtube-iframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. SECCIÓN DE TEORÍAS Y REGLAS (ACCORDION) -->
+    <section id="teoria" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Teoría y Reglamento Oficial</h2>
+                <p>Revisa las reglas fundamentales del juego aprobadas por la FIVB.</p>
+            </div>
+
+            <div class="accordion-container fade-in">
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Dimensiones de la Cancha y Malla</span>
+                        <i class="fa-solid fa-chevron-down icon-arrow"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>La cancha mide <strong>18 x 9 metros</strong>, rodeada por una zona libre de al menos 3 metros. La altura de la red varía según la categoría: <strong>2.43 m para hombres</strong> y <strong>2.24 m para mujeres</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Composición de los Equipos</span>
+                        <i class="fa-solid fa-chevron-down icon-arrow"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Cada equipo está integrado por 6 jugadores en pista y hasta 6 suplentes. El equipo cuenta con posiciones especializadas: colocador/armador, atacantes centrales, punteros, opuestos y el <em>Líbero</em> (especialista defensivo).</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span> Sistema de Puntuación (Rally Point)</span>
+                        <i class="fa-solid fa-chevron-down icon-arrow"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Un partido se gana al obtener <strong>3 de 5 sets</strong>. Los primeros 4 sets se juegan a 25 puntos (con diferencia de 2). En caso de empate 2-2, el quinto set (de desempate o <em>tie-break</em>) se juega a 15 puntos.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span> Rotación y Saque</span>
+                        <i class="fa-solid fa-chevron-down icon-arrow"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Los jugadores rotan en el sentido de las agujas del reloj cuando recuperan el saque. El saque debe ejecutarse antes de que pasen 8 segundos desde el pitido del árbitro detrás de la línea de fondo.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Faltas Comunes y Señales</span>
+                        <i class="fa-solid fa-chevron-down icon-arrow"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Las faltas habituales incluyen: más de 3 toques por equipo, doble golpe consecutivo por el mismo jugador, invasión por debajo de la red, o toque de la red durante la jugada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECCIÓN DE SISTEMAS DE JUEGO (TABS) -->
+    <section id="sistemas" class="section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Sistemas Tácticos de Juego</h2>
+                <p>Comprende las diferentes formaciones tácticas utilizadas en el voleibol moderno.</p>
+            </div>
+
+            <div class="tabs-container fade-in">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="tab-60">Sistema 6-0</button>
+                    <button class="tab-btn" data-tab="tab-42">Sistema 4-2</button>
+                    <button class="tab-btn" data-tab="tab-51">Sistema 5-1</button>
+                </div>
+
+                <!-- Tab Content 6-0 -->
+                <div class="tab-content active" id="tab-60">
+                    <div class="system-layout">
+                        <div class="system-text">
+                            <h3>Sistema 6-0 (Recreativo / Escolar)</h3>
+                            <p><strong>¿Cuándo usarlo?</strong> Recomendado para la etapa de iniciación en educación física.</p>
+                            <p>Todos los jugadores cumplen la función de colocadores cuando se encuentran en la posición central de la red (posición 3). No hay roles fijos ni especializaciones.</p>
+                        </div>
+                        <div class="court-diagram">
+                            <div class="court-net">RED</div>
+                            <div class="court-half">
+                                <div class="player pos-4">4</div>
+                                <div class="player pos-3 armador">3 (Colocador)</div>
+                                <div class="player pos-2">2</div>
+                                <div class="player pos-5">5</div>
+                                <div class="player pos-6">6</div>
+                                <div class="player pos-1">1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content 4-2 -->
+                <div class="tab-content" id="tab-42">
+                    <div class="system-layout">
+                        <div class="system-text">
+                            <h3>Sistema 4-2 (Intermedio)</h3>
+                            <p><strong>¿Cuándo usarlo?</strong> Equipos en desarrollo táctico inicial.</p>
+                            <p>Consta de 4 atacantes y 2 colocadores situados en posiciones opuestas. El armador que está en la zona delantera (red) realiza la distribución del balón.</p>
+                        </div>
+                        <div class="court-diagram">
+                            <div class="court-net">RED</div>
+                            <div class="court-half">
+                                <div class="player pos-4">A4</div>
+                                <div class="player pos-3 armador">C1</div>
+                                <div class="player pos-2">A1</div>
+                                <div class="player pos-5">A3</div>
+                                <div class="player pos-6">C2</div>
+                                <div class="player pos-1">A2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content 5-1 -->
+                <div class="tab-content" id="tab-51">
+                    <div class="system-layout">
+                        <div class="system-text">
+                            <h3>Sistema 5-1 (Avanzado / Profesional)</h3>
+                            <p><strong>¿Cuándo usarlo?</strong> Utilizado en alta competencia y selecciones.</p>
+                            <p>Cuenta con 5 atacantes y 1 único Colocador/Armador. Cuando el armador está en la zona trasera, penetra a la red para armar, permitiendo tener 3 atacantes de frente.</p>
+                        </div>
+                        <div class="court-diagram">
+                            <div class="court-net">RED</div>
+                            <div class="court-half">
+                                <div class="player pos-4">Punta</div>
+                                <div class="player pos-3">Central</div>
+                                <div class="player pos-2">Opuesto</div>
+                                <div class="player pos-5">Punta</div>
+                                <div class="player pos-6 libero">Líbero</div>
+                                <div class="player pos-1 armador">Armador</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECCIÓN DE CONTACTO -->
+    <section id="contacto" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Sugerencias de mejora</h2>
+                <p>Escríbenos para consultas sobre los entrenamientos y talleres deportivos.</p>
+            </div>
+
+            <div class="contact-grid fade-in">
+                <div class="contact-info">
+                    <h3>Unidad Educativa Antofagasta</h3>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p><strong>Dirección:</strong> Av. Educación s/n, Zona Central</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p><strong>Teléfono:</strong> +591 73899061 </p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p><strong>Correo Electrónico:</strong> jesusvf738@gamail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <p><strong>Atención:</strong> Lunes a Viernes (08:00 - 16:00)</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" class="form-input" placeholder="Tu nombre...">
+                        <span class="error-msg" id="err-nombre">Por favor ingresa tu nombre</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" class="form-input" placeholder="tu@correo.com">
+                        <span class="error-msg" id="err-email">Ingresa un correo electrónico válido</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" rows="4" class="form-input" placeholder="¿En qué te podemos ayudar?"></textarea>
+                        <span class="error-msg" id="err-mensaje">Escribe un mensaje de al menos 10 caracteres</span>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Mensaje <i class="fa-solid fa-paper-plane"></i></button>
+                    <div class="form-status" id="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SECCIÓN DE EXTRAS (REGLA LIBRE: DATOS Y CARRUSEL) -->
+    <section id="extras" class="section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Curiosidades y Motivación</h2>
+            </div>
+
+            <!-- Datos Curiosos Grid -->
+            <div class="facts-grid fade-in">
+                <div class="fact-card">
+                    <div class="fact-icon">🏐</div>
+                    <h4>Origen histórico</h4>
+                    <p>Fue inventado en 1895 por William G. Morgan en Massachusetts, EE.UU., bajo el nombre original de <em>"Mintonette"</em>.</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon"></div>
+                    <h4>Velocidad récord</h4>
+                    <p>El remate más rápido registrado superó los <strong>135 km/h</strong> en partidos de categoría profesional masculina.</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon"></div>
+                    <h4>Intensa actividad</h4>
+                    <p>Un jugador de voleibol realiza en promedio más de <strong>300 saltos</strong> en un solo partido competitivo.</p>
+                </div>
+            </div>
+
+            <!-- Carrusel de Frases Motivadoras -->
+            <div class="carousel-container fade-in">
+                <div class="quote-carousel" id="quote-carousel">
+                    <div class="quote-slide active">
+                        <p class="quote-text">"El talento gana partidos, pero el trabajo en equipo y la inteligencia ganan campeonatos."</p>
+                    </div>
+                    <div class="quote-slide">
+                        <p class="quote-text">"No cuentes los días, haz que los días cuenten. Cada entrenamiento te acerca a la victoria."</p>
+                    </div>
+                    <div class="quote-slide">
+                        <p class="quote-text">"El voleibol no es solo golpear el balón; es confiar ciegamente en el compañero que cubre tu espalda."</p>
+                    </div>
+                </div>
+                <div class="carousel-dots" id="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER ACTUALIZADO -->
+    <footer class="footer">
+        <div class="container footer-content">
+            
+            <!-- Redes Sociales -->
+            <div class="footer-block">
+                <h4>conoce mas en las redes sociales</h4>
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/@profe__pato/photo/7626179604146949384?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok" class="social-btn tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://youtu.be/Jfn8TlTASJk?si=oSXAuXJTVXHVkYH-" target="_blank" aria-label="YouTube" class="social-btn youtube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.fivb.com" target="_blank" aria-label="FIVB" class="social-btn fivb" title="Federación Internacional de Voleibol"><i class="fa-solid fa-globe"></i> FIVB</a>
+                </div>
+            </div>
+
+            <!-- Descargas Oficiales -->
+            <div class="footer-block">
+                <h4>Documentos y Reglamento</h4>
+                <div class="download-links">
+                    <a href="https://www.fivb.com/en/volleyball/thegame_glossary/officialvolleyballrules" target="_blank" class="btn-download">
+                        <i class="fa-solid fa-file-pdf"></i> Reglamento Oficial FIVB
+                    </a>
+                    <a href="https://www.fivb.com" target="_blank" class="btn-download">
+                        <i class="fa-solid fa-book"></i> Libro de Casos de Arbitraje
+                    </a>
+                </div>
+            </div>
+
+            <!-- Derechos Reservados -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Unidad Educativa Antofagasta — Todos los derechos reservados.</p>
+                <p class="credits">Diseñado para la formación deportiva estudiantil.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante Volver Arriba -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Archivo de JavaScript Vanilla -->
+    <script src="app.js"></script>
+</body>
+</html>
