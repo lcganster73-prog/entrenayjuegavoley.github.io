@@ -808,38 +808,34 @@ body {
 /* ==========================================
    MEDIA QUERIES (RESPONSIVE DESIGN)
    ========================================== */
+/* CORRECCIÓN DEL MENÚ LATERAL */
+
 @media (max-width: 768px) {
-    .hamburger-btn {
+    .header-sidebar .nav-menu {
+        position: static;
         display: block;
-    }
-
-    .nav-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
         width: 100%;
-        background-color: var(--primary-color);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease;
+        max-height: none;
+        overflow: visible;
+        background: transparent;
     }
 
-    .nav-menu.active {
-        max-height: 350px;
-    }
-
-    .nav-menu ul {
+    .header-sidebar .nav-menu ul {
+        display: flex;
         flex-direction: column;
-        padding: 20px;
-        align-items: center;
+        align-items: stretch;
+        padding: 0;
+        gap: 15px;
     }
 
-    .hero-content h1 {
-        font-size: 2.3rem;
+    .header-sidebar .nav-menu li {
+        width: 100%;
     }
 
-    .system-layout, .contact-grid {
-        grid-template-columns: 1fr;
+    .header-sidebar .nav-link {
+        display: block;
+        width: 100%;
+        color: white;
     }
 }
 
